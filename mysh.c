@@ -82,6 +82,9 @@ void ReadThenWrite(){
 		}
 
 		// free up pointers
+		for (int i = 0; i<len; i++) {
+		    free(commands[i]);
+		}
 		free(commands);
 		// reset line buffer
 		lstart = pos + 1;
